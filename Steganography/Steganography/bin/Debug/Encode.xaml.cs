@@ -2,6 +2,8 @@
 using System;
 using System.Collections;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -19,6 +21,16 @@ namespace Steganography
         {
             InitializeComponent();
             DataContext = this;
+        }
+
+        public string SourceUri
+        {
+            get
+            {
+                String p = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Locati‌​on).ToString();
+                p = p.Replace('\\', '/');
+                return Path.Combine(p, "images/b1.jpg");
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

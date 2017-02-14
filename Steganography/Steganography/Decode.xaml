@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Milica\Desktop\Github\Soft2016\Steganography\Steganography\bin\Debug\images\b2.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="{Binding SourceUri}" Stretch="UniformToFill"/>
         </Grid.Background>
         <Canvas Height="500"  Width="700" >
             <Button x:Name="button" Content="Choose Picture" Canvas.Left="88" Canvas.Top="40" Width="190" Height="34" Click="button_Click" FontSize="20" FontFamily="Rockwell">

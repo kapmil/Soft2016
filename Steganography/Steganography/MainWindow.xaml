@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Steganography"
         mc:Ignorable="d"
-        Title="Steganography" Height="598" Width="948" Icon="C:\Users\Milica\Desktop\Github\Soft2016\Steganography\Steganography\bin\Debug\images\icon1.png">
+        Title="Steganography" Height="598" Width="948" Icon="{Binding SourceUri2}">
     <Canvas Name="CanvasName" >
         <Canvas.Background>
-            <ImageBrush ImageSource="C:\Users\Milica\Desktop\Github\Soft2016\Steganography\Steganography\bin\Debug\images\b9.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="{Binding SourceUri}" Stretch="UniformToFill"/>
         </Canvas.Background>
         <Button x:Name="button" Content="ENCODE" HorizontalAlignment="Left" Margin="170,229,0,0" VerticalAlignment="Top" Width="200" Height="70" Click="button_Click" Opacity="0.8" FontWeight="Bold" FontSize="25" FontFamily="Rockwell">
             <Button.Effect>

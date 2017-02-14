@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
@@ -13,6 +14,26 @@ namespace Steganography
     {
         Button ButtoninXAML;
 
+
+        public string SourceUri
+        {
+            get
+            {
+                String p = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Locati‌​on).ToString();
+                p = p.Replace('\\', '/');
+                return Path.Combine(p, "images/b9.jpg");
+            }
+        }
+
+        public string SourceUri2
+        {
+            get
+            {
+                String p = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Locati‌​on).ToString();
+                p = p.Replace('\\', '/');
+                return Path.Combine(p, "images/icon1.png");
+            }
+        }
         public MainWindow()
         {
             InitializeComponent();
